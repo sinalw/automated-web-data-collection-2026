@@ -1,6 +1,8 @@
 library(rvest)
 library(dplyr)
 
+Sys.setenv(CHROMOTE_CHROME = "C:\\Users\\loewesic\\AppData\\Local\\BraveSoftware/Brave-Browser/Application/brave.exe")
+
 # Start a live Chrome session and load the page
 live <- read_html_live("https://www.cducsu.de/presse")
 
@@ -16,7 +18,7 @@ for (i in 1:20) {
   
   live$click("a.button[rel='next']")
   
-  Sys.sleep(1)
+  Sys.sleep(3)
 }
 
 
